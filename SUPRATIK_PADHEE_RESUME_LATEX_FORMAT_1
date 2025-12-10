@@ -1,0 +1,196 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.3in}
+\addtolength{\evensidemargin}{-0.3in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-0.700in}
+\addtolength{\textheight}{10.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\medium{
+    {#1 \vspace{-5pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-4pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-10pt}
+}
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-3000pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+
+% Custom command for grouped projects
+\newcommand{\resumeCompanyProject}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \\
+    \end{tabular*}\vspace{-7pt}
+    \begin{itemize}[leftmargin=0.3in, label={}]
+      #2
+    \end{itemize}
+}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Supratik Padhee} \\ \vspace{0pt}
+    \medium +91 7978259993 $|$ \href{https://outlook.live.com}{supratikpadhee.career@outlook.com}    \\ 
+    \medium  
+    \href{https://linkedin.com/in/supratikpadhee}{\bf LinkedIn} $|$
+    \href{https://github.com/piCOOLpa}{\bf GitHub} 
+\end{center}
+
+\vspace{-30pt}
+\section{Profile}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\item 
+Skilled and Result-Driven, Data and Platform Engineer with 8+ years of experience in designing and optimizing \textbfdata{pipelines, ETL workflows, and enterprise data warehouse solutions. Proficient in Python, SQL, Flask, FastApi, pySpark, Kubernetes, Docker, Databricks, Kafka, AWS EMR, and AWS Glue, AWS RDS, Snowflake} to build scalable, multi-terabyte big data platforms for companies in Supply-Chain, Ecommerce, Entertainment, Transportaion domains.
+\end{itemize}
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{:\hspace{0.06cm}  Python, SQL, Scala} \\
+     \textbf{Big Data Technologies}{:\hspace{0.49cm}     Spark, PySpark, Spark SQL, YARN, Kubernetes, Hadoop, Hive, Delta Lake } \\
+     \textbf{Streaming Technology}{:\hspace{0.51cm} Kafka, Spark structured streaming} \\
+     \textbf{Cloud computing}{:\hspace{1.38cm} Databricks, Amazon S3, AWS Glue, AWS EMR, AWS Lambda, AWS Dynamodb } \\
+     \textbf{Data Engineering Tools}{:\hspace{0.28cm} Data Modelling, ETL/ELT data Pipeline, Apache Zepellin}\\
+     \textbf{Orchestration}{:\hspace{2.02cm} Airflow, Kubernetes} \\
+     \textbf{Familiar}{:\hspace{3cm} FastAPI, Flask Api, Elastic search, Neo4J} \\
+    }}
+ \end{itemize}
+
+\section{Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+    {Brambles} {December 2021 - Present}
+    {Senior Data Engineer - Various Projects}{Bengaluru, India}
+  
+  \resumeItemListStart
+
+    \resumeItem {\textbf{InsightsToAction Analysis Platform}}
+    \resumeItemListStart
+      \resumeItem {Developed, optimized \textbf{ETL pipelines} using \textbf{PostgreSQL}, \textbf{Hive, PySpark (DataFrame, S3 SparkSQL, RDD)}, orchestrated with \textbf{Apache Airflow}, and enabled insights through \textbf{Apache Superset} visualizations.}
+      \resumeItem {Implemented \textbf{Spark optimization techniques} such as \textbf{caching, multithreading, and broadcast} joins, resulting in a 20\% decrease in processing time.}
+    \resumeItemListEnd
+
+    \resumeItem {\textbf{Interactive Big-Data Platform}}
+    \resumeItemListStart
+      \resumeItem {Engineered scalable computing platform using \textbf{Python, Flask, AWS EMR, Spark, Zeppelin, Apache Hive, Livy, and Ranger}, enabling users to define, execute, and manage data analytics jobs, improving efficiency.}
+    \resumeItemListEnd
+
+    \resumeItem {\textbf{Job Processing and Asset Tracking Core}}
+    \resumeItemListStart
+      \resumeItem {Developed \textbf{AWS ECS Flask API} server generating \textbf{dynamic DAGs} in \textbf{Apache Airflow}, push messages into a \textbf{Kafka} broker for real-time tracking of DAG processing status (success or failure).}
+    \resumeItemListEnd
+    
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+    \resumeSubHeadingListStart
+  \resumeSubheading
+    { Altra Dimension Technology} {September 2020 - December 2021}
+    {Cloud Data Platform Engineer} {Remote, India}
+  
+  \resumeItemListStart
+    \resumeItem {\textbf{Identity Resolution}}
+    \resumeItemListStart
+      \resumeItem {Engineered Identity Resolution system on \textbf{AWS (S3, Glue, Lambda, Neptune, CloudFormation, DynamoDB, Elasticsearch, API Gateway) using incremental, historical} using \textbf{Snowflake, Kafka, and S3}, creating a unified customer identity.}
+    \resumeItemListEnd
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Xerox Technology Services } {September 2017 - May 2020}
+    {Data Platform Engineer} {Bengaluru, India}
+  
+  \resumeItemListStart
+    \resumeItem {\textbf{CiteWeb and RedLight Analysis}}
+    \resumeItemListStart
+      \resumeItem {Engineered scalable computing platform using \textbf{Python, Flask, AWS EMR, Spark, Zeppelin, Apache Hive, Livy, and Ranger}, enabling users to define, execute, and manage data analytics jobs, improving efficiency.}
+    \resumeItemListEnd
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+  
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {CDAC Electronics-city, Bengaluru}{Bengaluru, Odisha}
+      {Post Graduate Diploma in Advance Computing (PGDAC)} {January 2017 - September 2017}
+    \resumeSubheading
+      {Silicon University, Bhubaneshwar}{Bhubaneshwar, Odisha}
+      {Bachelor of Technology in Computer Science and Engineering (BTECH)} {September 2011 - May 2015}
+  \resumeSubHeadingListEnd
+
+\end{document}
