@@ -137,7 +137,7 @@ Skilled and Result-Driven, Data and Platform Engineer with 8+ years of experienc
   
   \resumeItemListStart
 
-    \resumeItem {\textbf{United Ingestion Platform}}
+    \resumeItem {\textbf{Unified Ingestion Platform}}
     \resumeItemListStart
       \resumeItem {Building Unified Ingestion Platform accommodates 200+ company wide finance data pipelines ingesting 20k+ tables processing ~5B events reconciling 20TB+ data daily with strict SLA.}
     \resumeItemListEnd
