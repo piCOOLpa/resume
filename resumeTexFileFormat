@@ -1,0 +1,158 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins tuned for single page
+\addtolength{\oddsidemargin}{-0.3in}
+\addtolength{\evensidemargin}{-0.3in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-0.85in}
+\addtolength{\textheight}{10.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%-----------HEADER-----------
+\begin{center}
+    \textbf{\Huge \scshape Supratik Padhee} \\ \vspace{2pt}
+    \small +91 7978259993 $|$
+    \href{mailto:supratikpadhee.career@outlook.com}{supratikpadhee.career@outlook.com} $|$
+    \href{https://linkedin.com/in/supratikpadhee}{\textbf{LinkedIn}} $|$
+    \href{https://github.com/piCOOLpa}{\textbf{GitHub}}
+\end{center}
+
+\vspace{-14pt}
+
+%-----------PROFILE-----------
+\section{Profile}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{Data Engineer with 8+ years delivering scalable data pipelines and materialization platforms across Finance, Supply Chain, and E-commerce — currently building and operating Spark-based infrastructure processing 20TB+ daily at Intuit.}}
+\end{itemize}
+
+\vspace{-4pt}
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages}{:\hspace{2.5cm} Python, SQL, Java, Scala} \\
+    \textbf{Big Data \& Processing}{:\hspace{0.35cm} Apache Spark, Apache Hive, Delta Lake, Kafka, Avro, Apache Comet, Apache Livy, Apache Ranger} \\
+    \textbf{Cloud \& Infrastructure}{:\hspace{0.3cm} AWS S3, EMR, ECS, Lambda, DynamoDB, Glue, Kubernetes, Docker, Jenkins} \\
+    \textbf{Data Engineering}{:\hspace{1.35cm} CDC Pipelines, Batch Materialization, Schema Registry, Data Quality, Data Governance, ETL/ELT} \\
+    \textbf{Frameworks \& Databases}{:\hspace{0.02cm} Flask, FastAPI, Elasticsearch, Neptune, MySQL, PostgreSQL, Splunk, Data Modeling} \\
+  }}
+\end{itemize}
+
+\vspace{-4pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  %--- Intuit ---
+  \resumeSubheading
+    {Intuit}{May 2025 -- Present}
+    {\textbf{Senior Data Engineer} -- United Ingestion Platform}{Bengaluru, India}
+  \resumeItemListStart
+    \resumeItem{Built and owned Spark materialisation engine on BPP — 30+ reconciler strategies, FGAC IAM, S3/Hive Metastore (HMAAS), and automated job alerting — processing 20TB+ daily across 200+ finance pipelines with high availability.}
+    \resumeItem{Replaced broadcast joins with Bloom-filter deduplication in QBO reconcilers, eliminating OOM-driven failures; demonstrated 25\%+ compute cost reduction via Apache Comet with platform-wide rollout underway; and led EMR 6.x $\rightarrow$ 7.2.0 (Spark 3.5.1) upgrade across 200+ pipelines.}
+    \resumeItem{Migrated PII classification from MDR v2 $\rightarrow$ v3 async API in uip-bpp-common — converting MDR from a hard runtime dependency to a TTL-cached soft coupling, eliminating cascading failures during metadata service outages.}
+  \resumeItemListEnd
+
+  %--- Brambles ---
+  \resumeSubheading
+    {Brambles}{December 2021 -- May 2025}
+    {\textbf{Senior Data Engineer} -- Various Projects}{Bengaluru, India}
+  \resumeItemListStart
+    \resumeItem{Engineered a self-service distributed computing platform on AWS EMR (Spark, Hive, Livy, Ranger, Zeppelin) — enabling data teams to self-serve pipeline execution and interactive exploration, replacing manual job request processes.}
+    \resumeItem{Built a multi-tenant onboarding API (Python/Flask on AWS ECS) enabling teams to self-provision EMR resources programmatically — reducing tenant onboarding from weeks of manual coordination to a self-serve API workflow.}
+  \resumeItemListEnd
+
+  %--- Altra Dimension ---
+  \resumeSubheading
+    {Altra Dimension Technology}{September 2020 -- December 2021}
+    {\textbf{Cloud Data Platform Engineer}}{Remote, India}
+  \resumeItemListStart
+    \resumeItem{Designed and owned an AWS serverless identity resolution pipeline (Lambda, Glue, Neptune, DynamoDB, Kafka) — processing incremental and historical vehicle records to unify customer identities across 50+ Photo Enforcement clients in the USA and Canada, handling schema variability across jurisdictions.}
+  \resumeItemListEnd
+
+  %--- Xerox ---
+  \resumeSubheading
+    {Xerox Technology Services}{September 2017 -- May 2020}
+    {\textbf{Data Platform Engineer}}{Bengaluru, India}
+  \resumeItemListStart
+    \resumeItem{Built a distributed analytics platform on AWS EMR (Python, Flask, Spark, Hive, Livy, Ranger) for CiteWeb and Red Light Analysis — replacing manual job request processes with self-serve pipeline execution, reducing analytics turnaround from days to hours.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-4pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {CDAC Electronics-city, Bengaluru}{Bengaluru, India}
+    {Post Graduate Diploma in Advanced Computing (PGDAC)}{January 2017 -- September 2017}
+  \resumeSubheading
+    {Silicon University, Bhubaneshwar}{Bhubaneshwar, India}
+    {Bachelor of Technology in Computer Science and Engineering}{September 2011 -- May 2015}
+\resumeSubHeadingListEnd
+
+\end{document}
